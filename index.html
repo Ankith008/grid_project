@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+<style>
+  body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+  }
+
+  .container {
+    display: grid;
+    width: 75%;
+    /* 75% of base font size */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.25rem;
+    /* 20px in rem */
+  }
+
+  img {
+    border-radius: 50%;
+    height: 2.1875rem;
+    /* 35px in rem */
+    margin-top: 0.5625rem;
+    /* 9px in rem */
+  }
+
+  .bio {
+    display: flex;
+  }
+
+  .daniel,
+  .jonathan,
+  .patrick,
+  .jeanette,
+  .kira {
+    padding: 0.9375rem;
+    /* 15px in rem */
+    margin: 0rem;
+  }
+
+  .daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 1.25rem top;
+    /* 20px in rem */
+    color: white;
+    border-radius: 0.9375rem;
+    /* 15px in rem */
+    grid-column: 1/span 2;
+    grid-row: 1
+  }
+
+  .jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    border-radius: 0.9375rem;
+    /* 15px in rem */
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .jeanette {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.9375rem;
+    /* 15px in rem */
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .patrick {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+    border-radius: 0.9375rem;
+    /* 15px in rem */
+    grid-column: 2/span 2;
+    grid-row: 2;
+  }
+
+  .kira {
+    background-color: white;
+    border-radius: 0.9375rem;
+    /* 15px in rem */
+    grid-column: 4/span 5;
+    grid-row: 1/span 2;
+  }
+
+  .detail {
+    margin-left: 1.25rem;
+    /* 20px in rem */
+    margin-top: 0.625rem;
+    /* 10px in rem */
+    margin-bottom: 0.9375rem;
+    /* 15px in rem */
+  }
+
+  .head {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    /* 15px in rem */
+    margin-bottom: 0.9375rem;
+    /* 15px in rem */
+  }
+
+  .para,
+  .name {
+    font-weight: 500;
+  }
+
+  .verify {
+    font-size: small;
+  }
+
+  .daniel img,
+  .patrick img {
+    border: 0.1875rem solid hsl(264, 17%, 61%);
+    /* 3px in rem */
+  }
+
+  .daniel .verify,
+  .jonathan .verify,
+  .patrick .verify {
+    color: rgba(255, 255, 255, 0.538);
+  }
+
+  .kira .verify,
+  .jeanette .verify {
+    color: rgba(0, 0, 0, 0.518);
+  }
+
+  .daniel .para,
+  .jonathan .para,
+  .patrick .para {
+    color: rgba(255, 255, 255, 0.407);
+  }
+
+  .kira .para,
+  .jeanette .para {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width:1024px) {
+
+
+    .container {
+      width: 80%;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .daniel {
+      grid-column: 1/span 2;
+      grid-row: 1;
+    }
+
+    .jonathan {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    .jeanette {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .patrick {
+      grid-column: 2/span 2;
+      grid-row: 2;
+    }
+
+    .kira {
+      grid-column: 1/span 3;
+      grid-row: 3;
+    }
+  }
+
+  @media (max-width:468px) {
+
+
+    .container {
+      width: 90%;
+      /* 90% of base font size */
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .daniel,
+    .jonathan,
+    .jeanette,
+    .patrick,
+    .kira {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="daniel">
+      <div class="bio">
+        <img src="images/image-daniel.jpg" alt="">
+        <div class="detail">
+          <div class="name">Daniel Clifford</div>
+          <div class="verify">Verified Graduate</div>
+        </div>
+      </div>
+      <div class="head">
+        I received a job offer mid-course, and the subjects I learned were current, if not more so,
+        in the company I joined. I honestly feel I got every penny’s worth.
+      </div>
+      <div class="para">
+        “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+        transition and have heard some people who had an amazing experience here. I signed up
+        for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+        The next 12 weeks was the best - and most grueling - time of my life. Since completing
+        the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+      </div>
+    </div>
+    <div class="jonathan">
+      <div class="bio">
+        <img src="images/image-jonathan.jpg" alt="">
+        <div class="detail">
+          <div class="name">Jonathan Walters</div>
+          <div class="verify">Verified Graduate</div>
+        </div>
+      </div>
+      <div class="head">
+        The team was very supportive and kept me motivated</div>
+      <div class="para">
+        “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+        for a big company. This was one of the best investments I’ve made in myself. ”</div>
+    </div>
+    <div class="jeanette">
+      <div class="bio">
+        <img src="images/image-jeanette.jpg" alt="">
+        <div class="detail">
+          <div class="name">Jeanette Harmon</div>
+          <div class="verify">Verified Graduate</div>
+        </div>
+      </div>
+      <div class="head">
+        An overall wonderful and rewarding experience</div>
+      <div class="para">
+        “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+        while doing something I love. ”</div>
+    </div>
+    <div class="patrick">
+      <div class="bio">
+        <img src="images/image-patrick.jpg" alt="">
+        <div class="detail">
+          <div class="name">Patrick Abrams</div>
+          <div class="verify">Verified Graduate</div>
+        </div>
+      </div>
+      <div class="head">
+        Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+        learning from their experiences was easy.</div>
+      <div class="para">
+        “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+        gave me the confidence necessary to be able to go out in the world and present myself as a capable
+        junior developer. The standard is above the rest. You will get the personal attention you need from
+        an incredible community of smart and amazing people. ”</div>
+    </div>
+    <div class="kira">
+      <div class="bio">
+        <img src="images/image-kira.jpg" alt="">
+        <div class="detail">
+          <div class="name">Kira Whittle</div>
+          <div class="verify">Verified Graduate</div>
+        </div>
+      </div>
+      <div class="head">
+        Such a life-changing experience. Highly recommended!</div>
+      <div class="para">
+        “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+        professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+        student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+        did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+        project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+        could ever have. In fact, I’ve often referred to it during interviews as an example of my development
+        experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+        100% recommend! ”</div>
+    </div>
+  </div>
+</body>
+
+</html>
